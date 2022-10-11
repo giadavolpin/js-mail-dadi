@@ -29,8 +29,10 @@ if (mail){
 const numeriGenerati = [];
 const numeriDaGenerare = 6;
 
-for (let i = 1 , i <= 6 , i++) {
+for (let i = 1 ; i <= 6 ; i++) {
     let numeroGiocatore = Math.floor(Math.random()* (6 - 1)) + 1;
     numeriGenerati.push (numeroGiocatore);   
+    let numeroComputer = Math.floor(Math.random()* (6 - 1)) + 1;
+    numeriGenerati.push (numeroComputer);
 }
 console.log(numeriGenerati) 
