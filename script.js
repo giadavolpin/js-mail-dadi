@@ -15,3 +15,10 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 
 */
+
+const mail = input ("Qual'è la tua mail?")
+
+
+
+const numeriGenerati = 
+const numeriDaGenerare = 6
