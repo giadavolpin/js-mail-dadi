@@ -16,15 +16,21 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 */
 
-const mail = input ("Qual'è la tua mail?")
+/* const mail = input ("Qual'è la tua mail?")
 
 const listaDAccesso = [] 
 if (mail){
     listaDAccesso
 
+} */
+
+
+
+const numeriGenerati = [];
+const numeriDaGenerare = 6;
+
+for (let i = 1 , i <= 6 , i++) {
+    let numeroGiocatore = Math.floor(Math.random()* (6 - 1)) + 1;
+    numeriGenerati.push (numeroGiocatore);   
 }
-
-
-
-const numeriGenerati = 
-const numeriDaGenerare = 6
+console.log(numeriGenerati) 
