@@ -26,13 +26,23 @@ if (mail){
 
 
 
-const numeriGenerati = [];
-const numeriDaGenerare = 6;
+let numeriGeneratiGiocatore = [];
+let numeriGeneratiComputer = [];
 
 for (let i = 1 ; i <= 6 ; i++) {
     let numeroGiocatore = Math.floor(Math.random()* (6 - 1)) + 1;
-    numeriGenerati.push (numeroGiocatore);   
-    let numeroComputer = Math.floor(Math.random()* (6 - 1)) + 1;
-    numeriGenerati.push (numeroComputer);
+    numeriGeneratiGiocatore.push (numeroGiocatore);  
 }
-console.log(numeriGenerati) 
+console.log(numeriGeneratiGiocatore);
+for (let i= 1 ; i <= 6; i++) {
+    let numeroComputer = Math.floor(Math.random()* (6 - 1)) + 1;
+    numeriGeneratiComputer.push (numeroComputer);
+}
+console.log(numeriGeneratiComputer);
+
+for (let i = 1 ; i <= numeriGeneratiGiocatore.length ; i++) {
+    if(numeriGeneratiGiocatore[0] < numeriGeneratiComputer[0]){
+        console.log();
+    }
+}
+
