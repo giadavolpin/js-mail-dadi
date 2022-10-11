@@ -6,7 +6,7 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 /* 
 1. chiedere mail utente
-2. creare lista di accesso
+2. creare lista di accesso , sapere SE è nella lista,
 3. esito controllo positivo o negativo 
 
 1. random 1-6 giocatore
@@ -17,6 +17,12 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 */
 
 const mail = input ("Qual'è la tua mail?")
+
+const listaDAccesso = [] 
+if (mail){
+    listaDAccesso
+
+}
 
 
 
