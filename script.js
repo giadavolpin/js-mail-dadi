@@ -21,8 +21,7 @@ const mailUtente = document.getElementById('emailUtente');
 let risposta = document.getElementById('risposta');
 /* 2. creare lista di accesso */
 const listaDAccesso = ['giada@gmail.com', 'mattia@gmail.com', 'pippo@gmail.com' ] 
-/*  3. SE è nella lista esito controllo positivo stampare esito
-    4. SE non è nella lista esito controllo negativo stampare esito */
+
 
     let inviaMail = document.getElementById('btn').value;
     btn.addEventListener('click', function(){
@@ -34,10 +33,11 @@ const listaDAccesso = ['giada@gmail.com', 'mattia@gmail.com', 'pippo@gmail.com' 
             }
             if(check) {
                risposta.innerHTML = 'Email Presente';
-               
+             /*   3. SE è nella lista esito controllo positivo stampare esito */
             }
             else {
                risposta.innerHTML = 'Email Non Presente';
+               /* 4. SE non è nella lista esito controllo negativo stampare esito */
         }
     } 
     }  
