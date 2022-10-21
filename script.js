@@ -6,29 +6,36 @@ Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 Stabilire il vincitore, in base a chi fa il punteggio più alto.*/
 
 /* 1. chiedere mail utente */
-const mailUtente = document.getElementById('emailUtente').value;
+
 let risposta = document.getElementById('risposta');
 /* 2. creare lista di accesso */
 const listaDAccesso = ['giada@gmail.com', 'mattia@gmail.com', 'pippo@gmail.com' ];
 
 
 
-let inviaMail = document.getElementById('btn').value;
+const btn = document.getElementById('btn');
 btn.addEventListener('click', function(){
+    risposta.innerHTML = '';
+    let mailUtente = document.getElementById('emailUtente').value;
+    let check = false;
     for (let i = 0; i < listaDAccesso.length; i++){
-        let check = false;
         if(mailUtente === listaDAccesso[i]){
             check = true;
             risposta.innerHTML = 'Email Presente';
             /*   SE è nella lista esito controllo positivo stampare esito */   
-    } else {
-    risposta.innerHTML = 'Email Non Presente';
-    /*  SE non è nella lista esito controllo negativo stampare esito */              
-    }
     } 
+    } 
+    if(check){
+        console.log('Benvenuto puoi entrare!')
+        risposta.innerHTML = 'Benvenuto puoi entrare'
+    } else {
+        console.log('La tua mail non è presente')
+        risposta.innerHTML = 'la tua mail non è presente'
+    }
+
     }) ;
 
-    /* NON MI SEGNA SEMPRE SBAGLIATA LA MAIL  */
+   
 
 
 
@@ -39,31 +46,25 @@ genero i num random x tutti e 2,
 li metto dentro (push) agli rispettivi array 
 calcolare il punteggio più alto e quindi assegnare vincitore.
 */
-let numeriGeneratiGiocatore = [];
-let  numeriGeneratiComputer = [];
-//scrivo il ciclo per generare i 6 numeri
-for (let i= 0; i <= 6; i++){
-    let numeriGiocatore = Math.floor(Math.random()* (6 - 1)) + 1;
-    numeriGiocatore.push(numeriGeneratiGiocatore);  
-}
-/* non mi funziona il push */
-//scrivo il ciclo per generare gli altri 6 numeri
-for (let i= 0; i <= 6; i++){
-    let numeriComputer = Math.floor(Math.random()* (6 - 1)) + 1;
-    numeriComputer.push(numeriGeneratiComputer);
-}
-//scrivo il ciclo per confrontare i due rispettivi array
-for (let i = 1 ; i <= numeriGeneratiGiocatore.length ; i++) {
-    if(numeriGeneratiGiocatore[0] < numeriGeneratiComputer[0]){
-        
-    }
-} 
-console.log(numeriGeneratiGiocatore, numeriGeneratiComputer);
+const dadi = document.getElementById('dadi');
+dadi.addEventListener('click', function() {
 
-if (numeriGeneratiGiocatore < numeriGeneratiComputer){
+
+//scrivo il ciclo per generare i 1 numero
+
+    let numeroGiocatore = Math.floor(Math.random()* (6 - 1)) + 1;  
+
+//scrivo il ciclo per generare gli altri 6 numeri
+
+    let numeriComputer = Math.floor(Math.random()* (6 - 1)) + 1;
+
+//scrivo confrontare i due 
+
+if (numeroGiocatore < numeroComputer){
     console.log('hai perso');
-} else if (numeriGeneratiGiocatore > numeriGeneratiComputer) {
+} else if (numeroGiocatore > numeroComputer) {
     console.log('hai vinto')
 } else {
     console.log('pareggio') 
 } 
+});
