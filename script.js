@@ -56,7 +56,7 @@ dadi.addEventListener('click', function() {
 
 //scrivo il ciclo per generare gli altri 6 numeri
 
-    let numeriComputer = Math.floor(Math.random()* (6 - 1)) + 1;
+    let numeroComputer = Math.floor(Math.random()* (6 - 1)) + 1;
 
 //scrivo confrontare i due 
 
@@ -68,3 +68,11 @@ if (numeroGiocatore < numeroComputer){
     console.log('pareggio') 
 } 
 });
+
+
+/*
+ESEMPIO MIO:
+let i = 1;
+i = i + i;
+
+i += i; */
